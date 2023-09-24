@@ -1,6 +1,7 @@
 from src.Risk_Analysis.entity import DataIngestionConfig,DataTransformationConfig
 from src.Risk_Analysis.utils.common import real_yaml,create_directories
 from src.Risk_Analysis.constants import config_file,params_file
+from src.Risk_Analysis.entity import ModelTrainerConfig
 
 
 
@@ -33,3 +34,20 @@ class Configuration:
         )
 
         return data_transformation
+    
+    def model_trainer_config(self)->ModelTrainerConfig:
+        trainer=self.config.Model_Trainer
+        transformation=self.config.Data_Transformation
+        
+
+        create_directories([trainer.trainer_dir])
+
+        trainer_config=ModelTrainerConfig(
+            trainer_dir=trainer.trainer_dir,
+            model_dir=trainer.model_dir,
+             transformation_dir=transformation.transformation_dir,
+            preprocessor_dir=transformation.preprocessor_dir,
+
+            
+        )
+        return trainer_config

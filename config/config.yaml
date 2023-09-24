@@ -10,3 +10,9 @@ Data_Transformation:
    transformation_dir : artifacts/data_transformation
    preprocessor_dir : artifacts/data_transformation/preprocessor.pkl
 
+Model_Trainer:
+   trainer_dir  : artifacts/model_trainer
+   model_dir  : artifacts/model_trainer/model.pkl
+
+
+

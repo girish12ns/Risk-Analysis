@@ -1,6 +1,7 @@
 from src.Risk_Analysis.Pipeline.data_ingestionPipeline import DataIngestionPipeline
 from src.Risk_Analysis.Pipeline.data_transformationPipline import DataTransformationPipeline
 from src.Risk_Analysis import logger
+from src.Risk_Analysis.Pipeline.Model_trainerPipeine import ModelTrainerPipeline
 
 
 try:
@@ -12,9 +13,17 @@ except Exception as e:
     raise e
 
 try:
-    data_ingestion=DataTransformationPipeline()
-    data_ingestion.main()
+    data_transformation=DataTransformationPipeline()
+    data_transformation.main()
     logger.info("Data transformation completed")
+
+except Exception as e:
+    raise e
+
+try:
+    model_training=ModelTrainerPipeline()
+    model_training.main()
+    logger.info("Model_training  completed")
 
 except Exception as e:
     raise e

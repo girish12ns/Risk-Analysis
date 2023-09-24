@@ -9,6 +9,17 @@ from pathlib import Path
 from typing import Any
 import dill
 
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
+from xgboost import XGBRFClassifier
+from catboost import CatBoostClassifier
+from sklearn.metrics import accuracy_score,classification_report,confusion_matrix,recall_score
+
+
+
 
 
 @ensure_annotations
@@ -38,6 +49,11 @@ def save_oject(filepath,obj):
     with open(filepath, 'wb') as f:
         load_obj=dill.dump(obj, f)
 
+
+def model_eval(true,prediction):
+    score=accuracy_score(true,prediction)
+    recall=recall_score(true,prediction)
+    return (score,recall)
 
 
 

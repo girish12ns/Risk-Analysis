@@ -13,3 +13,10 @@ class DataIngestionConfig:
 class DataTransformationConfig:
     transformation_dir:Path
     preprocessor_dir :Path
+
+@dataclass(frozen=True)
+class ModelTrainerConfig:
+    trainer_dir  : Path
+    model_dir  : Path
+    transformation_dir :Path
+    preprocessor_dir :Path
