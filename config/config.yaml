@@ -1,0 +1,8 @@
+Artifacts : artifacts
+
+Data_Ingestion:
+  root_dir : artifacts/data_ingestion
+  source_dir : DATA_BOOK\Credit_Analysis.csv
+  train_dir : artifacts/data_ingestion/train.csv
+  test_dir : artifacts/data_ingestion/test.csv
+
