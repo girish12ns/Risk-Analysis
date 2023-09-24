@@ -7,6 +7,9 @@ from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
+import dill
+
+
 
 @ensure_annotations
 def real_yaml(path_to_yaml:Path)->ConfigBox:
@@ -27,6 +30,13 @@ def create_directories(file:list,verbose=True):
         if verbose:
             logger.info("directory is created ")
 
+
+
+def save_oject(filepath,obj):
+    filepath=Path(filepath)
+    
+    with open(filepath, 'wb') as f:
+        load_obj=dill.dump(obj, f)
 
 
 

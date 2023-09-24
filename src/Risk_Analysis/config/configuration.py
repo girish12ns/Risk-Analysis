@@ -1,6 +1,7 @@
-from src.Risk_Analysis.entity import DataIngestionConfig
+from src.Risk_Analysis.entity import DataIngestionConfig,DataTransformationConfig
 from src.Risk_Analysis.utils.common import real_yaml,create_directories
 from src.Risk_Analysis.constants import config_file,params_file
+
 
 
 class Configuration:
@@ -21,3 +22,14 @@ class Configuration:
   
         )
         return data_ingestion_config
+    def get_transformations_config(self)->DataTransformationConfig:
+        data_trans=self.config.Data_Transformation
+
+        create_directories([data_trans.transformation_dir])
+
+        data_transformation=DataTransformationConfig(
+            transformation_dir=data_trans.transformation_dir,
+            preprocessor_dir=data_trans.preprocessor_dir
+        )
+
+        return data_transformation
