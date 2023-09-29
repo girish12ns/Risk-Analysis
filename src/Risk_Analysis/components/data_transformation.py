@@ -14,15 +14,12 @@ class DataTransformation:
 
     def get_data_transformation(self):
 
-        cat_features=['Days_took_Disbursement']
-        numerical_features=['Term', 'NoEmp', 'NewExist', 'CreateJob', 'RetainedJob', 'UrbanRural',
-                            'RevLineCr', 'LowDoc', 'DisbursementGross', 'GrAppv', 'SBA_Appv']
+        
+        numerical_features=['Term', 'NoEmp', 'NewExist', 'CreateJob', 'RetainedJob', 'UrbanRural','RevLineCr',	
+                            'LowDoc', 'DisbursementGross', 'GrAppv', 'SBA_Appv']
 
 
 
-        cat_pip=Pipeline(steps=[
-            ('imputer',SimpleImputer(strategy='most_frequent'))
-            ])
         num_pip=Pipeline(steps=[
             ('scaler',StandardScaler()),
             ('imputer',SimpleImputer(strategy='median'))
@@ -32,8 +29,7 @@ class DataTransformation:
 
         
         preprocessor=ColumnTransformer([
-            ('num_pip',num_pip,numerical_features),
-            ('cat_pip',cat_pip,cat_features)
+            ('num_pip',num_pip,numerical_features)
             ])
         return preprocessor
     

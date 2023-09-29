@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOAN APPLICATION OF GLOBAL VENTURES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text color */
+        }
+
+        header {
+            background-color: #3498db; /* Blue color for header */
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        .variable {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 18px;
+            color: #3498db; /* Blue label text color */
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .submit-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50; /* Green color for submit button */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        /* Additional Styles for Select Boxes */
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url('arrow-down.png'); /* Replace with your own arrow image */
+            background-size: 20px;
+            background-position: right center;
+            background-repeat: no-repeat;
+            padding-right: 30px;
+        }
+
+        /* Highlight on Hover */
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #e74c3c; /* Red border on focus */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loan Application of Global Ventures</h1>
+    </header>
+    <div class="container">
+        <form action="{{ url_for('predict_data') }}" method="post">
+            <div class="variable">
+                <label for="Term">Loan Term (in months)</label>
+                <input type="number" id="Term" name="Term" placeholder="Enter Loan Term">
+            </div>
+            <div class="variable">
+                <label for="NoEmp">Number of Employees</label>
+                <input type="number" id="NoEmp" name="NoEmp" placeholder="Enter Number of Employees">
+            </div>
+            <div class="variable">
+                <label for="NewExist">Business Type</label>
+                <select id="NewExist" name="NewExist">
+                    <option value="1">Existing Business</option>
+                    <option value="2">New Business</option>
+                </select>
+            </div>
+            <div class="variable">
+                <label for="CreateJob">Number of Jobs Created</label>
+                <input type="number" id="CreateJob" name="CreateJob" placeholder="Enter Number of Jobs Created">
+            </div>
+            <div class="variable">
+                <label for="RetainedJob">Number of Jobs Retained</label>
+                <input type="number" id="RetainedJob" name="RetainedJob" placeholder="Enter Number of Jobs Retained">
+            </div>
+            <div class="variable">
+                <label for="UrbanRural">Business Location</label>
+                <select id="UrbanRural" name="UrbanRural">
+                    <option value="1">Urban</option>
+                    <option value="2">Rural</option>
+                    <option value="0">Undefined</option>
+                </select>
+            </div>
+            <div class="variable">
+                <label for="RevLineCr">Revolving Line of Credit</label>
+                <select id="RevLineCr" name="RevLineCr">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="variable">
+                <label for="LowDoc">Are you in LowDoc Program?</label>
+                <select id="LowDoc" name="LowDoc">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <div class="variable">
+                <label for="DisbursementGross">Disbursement Gross Amount</label>
+                <input type="number" id="DisbursementGross" name="DisbursementGross" placeholder="Enter Disbursement Gross Amount">
+            </div>
+            <div class="variable">
+                <label for="GrAppv">Total Amount Approved by Global Ventures</label>
+                <input type="number" id="GrAppv" name="GrAppv" placeholder="Enter Total Amount Approved">
+            </div>
+            <div class="variable">
+                <label for="SBA_Appv">Global Ventures Guaranteed Amount of Approved Loan</label>
+                <input type="number" id="SBA_Appv" name="SBA_Appv" placeholder="Enter Guaranteed Amount">
+            </div>
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

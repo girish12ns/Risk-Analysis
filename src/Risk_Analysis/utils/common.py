@@ -55,6 +55,12 @@ def model_eval(true,prediction):
     recall=recall_score(true,prediction)
     return (score,recall)
 
+def load_object(filepath):
+
+    with open(filepath,'rb') as f:
+        loaded_object = dill.load(f)
+    return loaded_object
+
 
 
 
