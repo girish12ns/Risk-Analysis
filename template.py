@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO,format='%(asctime)s - %(name)s - %(leveln
 project_name="Risk_Analysis"
 
 file_name_list=[
-    "github/workflows/.gitkeep",
+    ".github/workflows/.gitkeep",
     "src/{}/__init__.py".format(project_name),
     "src/{}/components/__init__.py".format(project_name),
     "src/{}/utils/__init__.py".format(project_name),
