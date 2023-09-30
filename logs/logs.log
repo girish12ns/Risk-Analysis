@@ -521,3 +521,16 @@
 [2023-09-29 12:34:37,959 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2023 12:34:37] "POST /predictdata HTTP/1.1" 200 -]
 [2023-09-29 12:34:47,634 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2023 12:34:47] "GET / HTTP/1.1" 200 -]
 [2023-09-29 12:34:47,680 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2023 12:34:47] "[33mGET /arrow-down.png HTTP/1.1[0m" 404 -]
+[2023-09-30 14:50:10,445 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://192.168.43.191:8080]
+[2023-09-30 14:50:10,445 - werkzeug - INFO - [33mPress CTRL+C to quit[0m]
+[2023-09-30 14:50:19,134 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2023 14:50:19] "GET / HTTP/1.1" 200 -]
+[2023-09-30 14:50:19,278 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2023 14:50:19] "GET / HTTP/1.1" 200 -]
+[2023-09-30 14:50:19,535 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2023 14:50:19] "[33mGET /arrow-down.png HTTP/1.1[0m" 404 -]
+[2023-09-30 14:50:19,543 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2023 14:50:19] "[33mGET /arrow-down.png HTTP/1.1[0m" 404 -]
+[2023-09-30 14:50:19,701 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2023 14:50:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2023-09-30 14:50:19,718 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2023 14:50:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -]
+[2023-09-30 14:50:56,785 - Risk Analysis - INFO - The data_frame_started]
+[2023-09-30 14:50:57,360 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2023 14:50:57] "POST /predictdata HTTP/1.1" 200 -]
